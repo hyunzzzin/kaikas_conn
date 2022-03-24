@@ -4,11 +4,31 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
-
+import { Provider  } from 'react-redux';
+import store from "./store"
+// const USER_INFO = {
+//   value : 0
+// };
+// const reducer =(state = USER_INFO, action) =>{
+//   switch(action.type) {
+//       case '':
+//           return {
+//               ...state,
+//           }
+//       case '':
+//           return {
+//               ...state,
+//           }
+//       default:
+//           return state
+//   }
+// }
+// let store = createStore(reducer);
 ReactDOM.render(
   <React.StrictMode>
+    <Provider store={store}>
     <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
