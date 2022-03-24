@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import caver from 'caver-js'
-import { useDispatch, useSelector } from 'react-redux';
+// import { useDispatch, useSelector } from 'react-redux';
 
 const App: React.FC<any> = (props:any): JSX.Element => {
   // const dispatch = useDispatch()
