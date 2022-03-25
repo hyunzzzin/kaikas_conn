@@ -7,7 +7,7 @@ import {Provider, useDispatch, useSelector } from 'react-redux';
 import { RootState, userinfo } from './rootReducer';
 
 
-
+/* 메인 소스 */
 
 const App: React.FC<any> = (props:any): JSX.Element => {
   
