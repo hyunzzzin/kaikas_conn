@@ -6,6 +6,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider  } from 'react-redux';
 import store from "./store"
+
 // const USER_INFO = {
 //   value : 0
 // };

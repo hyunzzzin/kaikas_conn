@@ -1,4 +1,10 @@
 /// <reference types="react-scripts" />
-    interface Window {
-        klaytn:any;
+import Caver from 'caver-js';    
+declare global{
+interface Window {
+        klaytn?:any;
+        caver?:any;
     }
+}
+
+    window.caver = new Caver(window.klaytn)

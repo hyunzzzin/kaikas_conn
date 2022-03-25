@@ -2,16 +2,23 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import caver from 'caver-js'
+// import caver from 'caver-js'
 import {Provider, useDispatch, useSelector } from 'react-redux';
 import { RootState, userinfo } from './rootReducer';
 
 
+
+
 const App: React.FC<any> = (props:any): JSX.Element => {
+  
+  
+  
+  
+
   const info = useSelector((store : RootState) => store.info);
 
   const dispatch = useDispatch()
-  const { klaytn } = window;
+  const { caver,klaytn } = window;
   
   const setAccountInfo = async() => {
     if(klaytn === undefined){
@@ -19,10 +26,17 @@ const App: React.FC<any> = (props:any): JSX.Element => {
       return;
     }
     const address = klaytn.selectedAddress;
-    console.log(address);
+    
+    // console.log(changeAddress);
+    
+    const balance = await caver.klay.getBalance(address);
+    const klay = caver.utils.fromPeb(balance, "KLAY");
+    console.log(klay);
+    
     console.log('1');
     dispatch(userinfo({
-      address:address
+      address:address,
+      balance:klay
     }))
     if(!address) {
       console.log('없네 ~')
