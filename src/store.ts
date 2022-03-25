@@ -1,12 +1,11 @@
-import { createStore } from 'redux';
+import { applyMiddleware, createStore } from 'redux';
 import { setData } from './action';
-import rootReducer from './rootReducer'
+import reducer from './rootReducer'
+import { composeWithDevTools } from 'redux-devtools-extension';
 
- const store = createStore(rootReducer);
 
- 
+ const store = createStore(reducer,composeWithDevTools(applyMiddleware()));
 
- store.dispatch({type:'SET_INFO'})
  
 
  export default store;

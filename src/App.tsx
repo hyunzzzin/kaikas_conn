@@ -4,9 +4,12 @@ import './App.css';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import caver from 'caver-js'
 import {Provider, useDispatch, useSelector } from 'react-redux';
+import { RootState, userinfo } from './rootReducer';
 
 
 const App: React.FC<any> = (props:any): JSX.Element => {
+  const info = useSelector((store : RootState) => store.info);
+
   const dispatch = useDispatch()
   const { klaytn } = window;
   
@@ -17,7 +20,10 @@ const App: React.FC<any> = (props:any): JSX.Element => {
     }
     const address = klaytn.selectedAddress;
     console.log(address);
-    dispatch({type:'SET_INFO',payload:address})
+    console.log('1');
+    dispatch(userinfo({
+      address:address
+    }))
     if(!address) {
       console.log('없네 ~')
       
@@ -49,7 +55,6 @@ const App: React.FC<any> = (props:any): JSX.Element => {
     if (klaytn) {
       try {
         await klaytn.enable();
-        //console.log('enable setNetworkInfo');
         
         
        
@@ -94,13 +99,18 @@ const App: React.FC<any> = (props:any): JSX.Element => {
     
   },[])
 
+  useEffect(()=>{
+    // console.log(info)
+    
+  },[info])
+  
  
   
   return(
     <>
     <div style={{backgroundColor:'orange'}}>
     <h1>카이카스 연결 가잣</h1>
-
+    {/* {info} */}
     </div>
   
     </>
