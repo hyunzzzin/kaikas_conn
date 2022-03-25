@@ -7,4 +7,4 @@ interface Window {
     }
 }
 
-    window.caver = new Caver(window.klaytn)
+    window.caver = new Caver("http://15.165.41.156:8551")

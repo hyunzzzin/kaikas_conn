@@ -11,6 +11,7 @@
     "@types/react": "^17.0.42",
     "@types/react-dom": "^17.0.14",
     "caver-js": "^1.8.0",
+    "crypto": "^1.0.1",
     "crypto-js": "^4.1.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -18,7 +19,6 @@
     "react-scripts": "5.0.0",
     "redux": "^4.1.2",
     "redux-actions": "^2.6.5",
-    "redux-devtools-extension": "^2.13.9",
     "redux-pender": "^2.0.12",
     "redux-thunk": "^2.4.1",
     "typescript": "^4.6.2",
@@ -51,5 +51,8 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "redux-devtools-extension": "^2.13.9"
+  }
 }
