@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# This project connect to Kaikas Wallet 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+UseEffect => 렌더되면서 Kaikas 연결 => 로그인 성공 시 redux에 지갑 주소와 Balance 저장
 
 ## Available Scripts
 
