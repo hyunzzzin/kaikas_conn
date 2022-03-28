@@ -132,7 +132,7 @@ const App: React.FC<any> = (props:any): JSX.Element => {
     <div style={{backgroundColor:'orange'}}>
     <h1>카이카스 연결 가잣</h1>
     {/* {info} */}
-    <button onClick={testKip7}>fds</button>
+    <button onClick={testKip7}>Button</button>
     </div>
   
     </>
